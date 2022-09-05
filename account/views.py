@@ -46,7 +46,7 @@ def signup_page(request):
             user.username = user.username.lower()
             user.save()
             login(request,user)
-            return redirect('home')
+            return redirect('articles:new_home')
         else:
             messages.error(request,"An error occurred during registration")
     return render(request,'account/login_signup.html',{'form':form})

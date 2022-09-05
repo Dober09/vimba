@@ -1,26 +1,23 @@
-{% extends 'main.html' %}
-{% load static %}
-{% block content %}
+{% extends 'main.html' %} {% load static %} {% block content %}
 
-          <div
-            class="img-bk"
-            style="background-image: url({% static 'img/istockphoto-1311764182-170667a.jpg' %})"
-          ></div>
-          <!-- bannar txt -->
-          <div class="subtitle">
-            <div class="subhead">
-                <h1>Vimba</h1>
-            </div>
-            <div class="subbody">
-                <p>
-                we alert and display criminal activities occurring in your
-                location.
-                </p>
-            </div>
-            <div class="subfoot">
-              
-                              <div class="btn"><a href="{% url 'signup' %}">sign up</a></div>
-              
-            </div>
-          </div>
+<div
+  class="img-bk"
+  style="background-image: url({% static 'img/pexels-martin-lopez-2157191.jpg '%})"
+></div>
+<!-- bannar txt -->
+<div class="subtitle">
+  <div class="subhead">
+    <h1>Vimba</h1>
+  </div>
+  <div class="subbody">
+    <p>we alert and display criminal activities occurring in your location.</p>
+  </div>
+  <div class="subfoot">
+    <div class="btn">
+      <a style="color: white; text-decoration: none" href="{% url 'signup' %}"
+        >sign up</a
+      >
+    </div>
+  </div>
+</div>
 {% endblock content %}
