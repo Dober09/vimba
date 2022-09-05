@@ -25,8 +25,5 @@ urlpatterns = [
     path('remove_missing_person/<str:pk>/',
          views.remove_missing, name="remove_missing"),
     # login
-    path('login/', views.login_page, name="login"),
-    path('logout/', views.logout_page, name="logout"),
-    path('signup/', views.signup_page, name="signup"),
-
+    
 ]

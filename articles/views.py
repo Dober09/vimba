@@ -12,8 +12,8 @@ def article_page(request):
 
 
 def article_detail(request,slug):
-    category = Categories.objects.get(slug=slug)
+    cartegory = Categories.objects.get(slug=slug)
     context = {
-        'cartegory':category
+        'cartegory':cartegory
     }
     return render(request,'articles/details_page.html',context)

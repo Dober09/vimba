@@ -1,0 +1,265 @@
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(19, 84%, 51%, 0.749);
+  border-radius: 17px;
+  margin: 20px auto;
+  width: 640px;
+  box-shadow: 1px 2px 5px #ccc;
+}
+
+.form .sub_header {
+  color: hsla(17, 20%, 93%, 0.849);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:600 ;
+  letter-spacing: 1px;
+  font-size: 22px;
+  padding-block: 10px;
+}
+
+.forms_group {
+  margin-block: 10px;
+}
+
+.form_group label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: hsla(17, 20%, 93%, 0.849);
+  margin-block-end: 9px;
+}
+
+.input_group input {
+  background-color: hsla(60, 9%, 98%, 0.945);
+  border: none;
+  width: 280px;
+  padding: 6px 5px;
+  margin-top: 6px;
+}
+
+.button_group {
+  display: flex;
+  justify-content: center;
+  margin-block: 12px;
+}
+
+.button_group input {
+  width: 150px;
+  height: 28px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgba(22, 21, 21, 0.829);
+  color: hsla(19, 84%, 51%, 0.749);
+  border-radius: 7px;
+  box-shadow: 1px 2px 3px hsla(19, 84%, 51%, 0.89);
+}
+
+.sign_in {
+  margin-block-end: 20px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(22, 21, 21, 0.829);
+}
+.fg_btn {
+  margin-block-end: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 17px;
+}
+
+.sign_in a,
+.fg_btn a {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  color: hsla(17, 20%, 93%, 0.849);
+}
+
+.sign_in a:hover,
+.fg_btn a:hover {
+  text-decoration: underline;
+  color: rgba(22, 21, 21, 0.829);
+}
+
+/* SECTION FOR CREATE ACCOUNT */
+.section {
+  margin: 20px auto;
+  width: 640px;
+}
+
+.section h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  margin-block-end: 15px;
+  color: hsla(19, 84%, 51%, 0.749);
+}
+
+.article {
+  border: 1px solid hsla(19, 84%, 51%, 0.89);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 1px 2px 3px hsla(17, 20%, 93%, 0.849);
+}
+
+.article h3 {
+  font-family: "myMeduim";
+  padding-block: 10px;
+  color: rgba(22, 21, 21, 0.829);
+}
+.article .para {
+  font-family: "myRegular";
+  color: rgba(22, 21, 21, 0.829);
+  text-align: justify;
+}
+
+.article .btn {
+  /* border: 1px solid; */
+  width: 200px;
+  text-align: center;
+  margin-top: 17px;
+}
+
+.article .btn a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "myMeduim";
+  cursor: pointer;
+  padding: 8px 24px;
+  color: hsla(17, 20%, 93%, 0.849);
+  background-color: hsla(19, 84%, 51%, 0.749);
+  border-radius: 5px;
+}
+.article .btn a:hover {
+  background-color: hsla(17, 20%, 93%, 0.849);
+  color: hsla(19, 84%, 51%, 0.749);
+}
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block:10px ;
+}
+
+.footer_header {
+  font-family: "myBold";
+  text-transform: capitalize;
+}
+
+.foot {
+  font-family: "myLight";
+  text-align: center;
+  color: rgba(22, 21, 21, 0.829);
+}
+
+.foot p a {
+  color: hsla(19, 84%, 51%, 0.89);
+  text-decoration: none;
+
+}
+
+.foot a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+  .title > h2 {
+    font-size: 24px;
+  }
+.section h2{
+    font-size: 20px;
+}
+ 
+
+  .form,
+  .section {
+    width: 570px;
+  }
+
+   .input_group input {
+ 
+  width: 290px;
+  
+}
+  .sign_in {
+    font-size: 19px;
+  }
+
+  .foot{
+      width: 310px;
+      font-size: 17px;
+  }
+
+}
+@media screen and (max-width: 480px) {
+  .title > h2 {
+    font-size: 20px;
+  }
+
+ .section h2{
+     font-size: 18px;
+ }
+  .form,
+  .section {
+    width: 350px;
+  }
+
+   .input_group input {
+ 
+  width: 250px;
+  
+}
+  .sign_in {
+    font-size: 17px;
+  }
+
+  .foot{
+      width: 210px;
+      font-size: 15px;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .title > h2 {
+    font-size: 18px;
+  }
+
+ .section h2{
+font-size: 15px;
+ }
+
+  .form,
+  .section {
+    width: 250px;
+  }
+
+  .input_group input {
+ 
+  width: 200px;
+  
+}
+  .sign_in {
+    font-size: 13px;
+  }
+
+  .foot{
+      width: 210px;
+      font-size: 15px;
+  }
+
+
+}
