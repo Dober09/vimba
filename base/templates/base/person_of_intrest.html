@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %} {% comment %}
+<h2>{{person.firstname}} {{person.lastname}}</h2>
+{% for tag in tags %}
+
+<p>{{tag}}</p>
+{% endfor %} {% endcomment %}
+<div class="block-wrapper">
+    <h1>Wanted Person</h1>
+  <div class="mytop">
+    <div class="img-circle">
+      <img src="{% static 'img/portfolio8.jpg' %}" alt="" height="150" />
+    </div>
+    <div class="fullname">
+      <h2>{{person.firstname }} {{person.lastname}}</h2>
+    </div>
+  </div>
+  <div class="mybottom">
+    <div>Crime :</div>
+    <div>
+      {% for tag in tags %}
+        {{tag}}
+      {% endfor %}
+    </div>
+    <div>crime circumstances :</div>
+    <div>{{person.crime_circumstances}}</div>
+    <div>Crime Date :</div>
+    <div>{{person.crime_date}}</div>
+    <div>Gender :</div>
+    <div>{{person.gender}}</div>
+    <div>Station telephone :</div>
+    <div>{{person.station_number}}</div>
+    <div>E-mail : </div>
+    <div>{{person.e_mail}}</div>
+  </div>
+</div>
+
+{% endblock content %}

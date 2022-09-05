@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<h1>welcome to home</h1>
+<div class="block-container">
+    <div class="block-items">
+            {% for cartegory in cartegories %}
+            <div class="block-item">
+                <div class="block-img" style="background-image:url({% static 'img/portfolio8.jpg' %});"></div>
+                <div class="block-text">
+                    <div class="block-title">
+                        <p>{{cartegory.name}}</p>
+                    </div>
+                    <div class="block-link">
+                        <a href="{% url 'articles:detail' slug=cartegory.slug %}">See More</a>
+                    </div>
+                </div>
+            </div>
+{% endfor %}
+        </div>
+    </div>
+{% endblock content %}

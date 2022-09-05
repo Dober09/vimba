@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% load static %}
+ 
+{% block content %}
+
+
+      {% comment %} <div class="section">
+        <div class="section-wrapper"> {% endcomment %}
+          <!-- banner img  -->
+          <div class="subheader">
+            <h2> Wanted People</h2>
+          </div>
+          <div class="blocks">
+            {% for person in wantedPeople %}
+            
+            <div class="block">
+              <a href="{% url 'POI' person.id %}">
+                <div class="blockimg">
+                  <img src="{% static 'img/portfolio8.jpg' %}" alt="" height="200" />
+                </div>
+              </a>
+              <div class="divider">
+                <div class="left">
+                  <p>{{person.firstname}} {{person.lastname}}</p>
+                </div>
+                {% comment %} <div class="right">
+                  <p><a href="{% url 'update_wanted' person.id %}">edit</a></p>
+                </div> {% endcomment %}
+
+                     <div class="right">
+                  <div style= 'display:flex;'>
+                    <div style='margin-right:4px'>
+                  <p><a href="{% url 'update_wanted' person.id %}">edit</a></p>
+                </div>
+                
+                <div>
+                      <p><a href="{% url 'remove_wanted' person.id %}">delete</a></p>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {% endfor %}
+            <div>
+            <a href='{% url "adding_wanted_person" %}'>add Wanted person</a>
+            </div>
+        </div>
+    {% comment %} </div>
+</div> {% endcomment %}
+{% endblock content %}

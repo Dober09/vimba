@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %} 
+<div class="block-wrapper">
+    <h1>Missing Person</h1>
+  <div class="mytop">
+    <div class="img-circle">
+      <img src="{% static 'img/portfolio8.jpg' %}" alt="" height="150" />
+    </div>
+    <div class="fullname">
+      <h2>{{person.firstname }} {{person.lastname}}</h2>
+    </div>
+  </div>
+  <div class="mybottom">
+    
+    <div>missing circumstances :</div>
+    <div>{{person.missing_circumstances}}</div>
+    <div>missing Date :</div>
+    <div>{{person.missing_date}}</div>
+    <div>Gender :</div>
+    <div>{{person.gender}}</div>
+    <div>Station telephone :</div>
+    <div>{{person.station_number}}</div>
+    <div>E-mail : </div>
+    <div>{{person.e_mail}}</div>
+  </div>
+</div>
+
+{% endblock content %}

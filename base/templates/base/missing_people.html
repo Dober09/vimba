@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+      
+          <!-- banner img  -->
+          <div class="subheader">
+            <h2> Missing People</h2>
+          </div>
+          <div class="blocks">
+            {% for person in missingPeople %}
+            
+            <div class="block">
+              <a href="{% url 'missing_person' person.id %}">
+                <div class="blockimg">
+                  <img src="{% static 'img/portfolio8.jpg' %}" alt="" height="200" />
+                </div>
+              </a>
+              <div class="divider">
+                <div class="left">
+                  <p>{{person.firstname}} {{person.lastname}}</p>
+                </div>
+
+                {% if reqeust.user != room.host %}
+                <div class="right">
+                  <div style= 'display:flex;'>
+                    <div style='margin-right:4px'>
+                  <p><a href="{% url 'update_missing' person.id %}">edit</a></p>
+                </div>
+                
+                <div>
+                      <p><a href="{% url 'remove_missing' person.id %}">delete</a></p>
+
+                    </div>
+
+                  </div>
+                </div>
+                {% endif %}
+
+                
+              </div>
+            </div>
+            {% endfor %}
+            <div class='missing_per'>
+              <a href="{% url 'adding_missing_person' %}">Add Missing Person</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

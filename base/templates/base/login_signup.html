@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if page == 'login' %}
+<div class='form-groups'>
+    <form method='POST'>
+        {% csrf_token %}
+
+        <div class='form-group'>
+            <label>Username:</label>
+            <input type='text' name='username' placeholder='Enter Username'>
+        </div>
+        <div class='form-group'>
+            <label>Password:</label>
+            <input type='password' name='password' placeholder='Enter Password'>
+        </div>
+
+        <input type='submit' value= 'Login'>
+    </form>
+    <p>havent signed up yet?</p>
+    <a href="{% url 'signup' %}">Sign Up</a>
+
+</div>
+
+{% else %}
+<div class='form-groups'>
+    <form method='POST'>
+        {% csrf_token %}
+
+      {{form.as_p}}
+
+        <input type='submit' value= 'Sign Up'>
+    </form>
+    <p> already signed up yet?</p>
+    <a href="{% url 'login' %}">login</a>
+</div>
+{% endif %}
+{% endblock content %}

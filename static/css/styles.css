@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1366px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/* navigation */
+.header-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 61, 17);
+    width: 100vw;
+    padding-block: 20px;
+}
+
+.header-nav{
+    display:  flex;
+}
+
+.header-logo a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight:bold ;
+    text-transform: capitalize;
+    color: snow;
+}
+.nav-item{
+    margin-right: 10px;
+}
+.nav-item a{
+    color: snow;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* banner section */
+.section{
+    margin: 2px auto;
+    align-self: center;
+    width: 970px;
+}
+
+.section-wrapper{
+ position: relative;
+ display: flex;
+ flex-direction: column
+
+}
+.img-bk{
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.subtitle {
+    align-self: center;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin-top: 30px;
+}
+.subtitle > div {
+    color: rgba(254, 254, 254, 0.996);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+.subfoot{
+    border: 2px solid rgb(255, 61, 17);
+    border-radius: 10px;
+    width: 140px;
+    padding-block:5px ;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* missing and wanted blocks  */
+.subheader{
+    margin-block:5px 10px ;
+    text-align: center;
+}
+
+.subheader h2{
+    color: rgba(0, 0, 0, 0.753);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-gap:10px;
+
+}
+.divider {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divider p{
+    color: red;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* missing and wanted blocks  */
+.subheader {
+    margin-block: 5px 10px;
+    text-align: center;
+}
+
+.subheader h2 {
+    color: rgba(0, 0, 0, 0.753);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+.divider {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divider p {
+    color: red;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media screen  and (max-width:1020px){
+
+    .container{
+        max-width: 620px;
+    }
+
+    .section{
+        width: 610px;
+    }
+
+    .blocks {
+         grid-template-columns: 1fr 1fr;
+        }
+}
+
+/* people of interst */
+.block-wrapper{
+    margin-top: 10px;
+}
+.block-wrapper h1{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.fullname h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.mybottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.mybottom div {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px solid;
+
+}
+
+.mybottom div:nth-of-type(odd) {
+text-transform: capitalize;
+    font-weight: 900;
+
+}
